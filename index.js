@@ -5,6 +5,7 @@ async function main() {
     const browser = await puppeteer.launch({
         headless: true,
         // args: ['--proxy-server=socks5://127.0.0.1:9053']
+        args: ['--no-sandbox','--disable-setuid-sandbox']
     });
 
     const r = r => Math.floor(Math.random() * r);
